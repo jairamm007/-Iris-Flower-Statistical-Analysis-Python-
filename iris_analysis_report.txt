@@ -1,0 +1,292 @@
+======================================================================
+    IRIS FLOWER STATISTICAL ANALYSIS REPORT
+======================================================================
+
+Dataset file         : iris.csv
+Total records        : 150
+Total features       : 8
+
+----------------------------------------------------------------------
+1. DATASET OVERVIEW
+----------------------------------------------------------------------
+
+First 10 rows:
+ sepal_length  sepal_width  petal_length  petal_width species
+          5.1          3.5           1.4          0.2  setosa
+          4.9          3.0           1.4          0.2  setosa
+          4.7          3.2           1.3          0.2  setosa
+          4.6          3.1           1.5          0.2  setosa
+          5.0          3.6           1.4          0.2  setosa
+          5.4          3.9           1.7          0.4  setosa
+          4.6          3.4           1.4          0.3  setosa
+          5.0          3.4           1.5          0.2  setosa
+          4.4          2.9           1.4          0.2  setosa
+          4.9          3.1           1.5          0.1  setosa
+
+Last 5 rows:
+ sepal_length  sepal_width  petal_length  petal_width   species
+          6.7          3.0           5.2          2.3 virginica
+          6.3          2.5           5.0          1.9 virginica
+          6.5          3.0           5.2          2.0 virginica
+          6.2          3.4           5.4          2.3 virginica
+          5.9          3.0           5.1          1.8 virginica
+
+Basic info:
+<class 'pandas.DataFrame'>
+RangeIndex: 150 entries, 0 to 149
+Data columns (total 5 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   sepal_length  150 non-null    float64
+ 1   sepal_width   150 non-null    float64
+ 2   petal_length  150 non-null    float64
+ 3   petal_width   150 non-null    float64
+ 4   species       150 non-null    str    
+dtypes: float64(4), str(1)
+memory usage: 6.0 KB
+
+Species distribution:
+  setosa      : 50 rows (33.3 %)
+  versicolor  : 50 rows (33.3 %)
+  virginica   : 50 rows (33.3 %)
+
+
+Selected rows where sepal_length > 5.0:
+  (5.1, 3.5, 1.4, 0.2, setosa)
+  (5.4, 3.9, 1.7, 0.4, setosa)
+  (5.4, 3.7, 1.5, 0.2, setosa)
+  (5.8, 4.0, 1.2, 0.2, setosa)
+  (5.7, 4.4, 1.5, 0.4, setosa)
+  (5.4, 3.9, 1.3, 0.4, setosa)
+  (5.1, 3.5, 1.4, 0.3, setosa)
+  (5.7, 3.8, 1.7, 0.3, setosa)
+  (5.1, 3.8, 1.5, 0.3, setosa)
+  (5.4, 3.4, 1.7, 0.2, setosa)
+  (5.1, 3.7, 1.5, 0.4, setosa)
+  (5.1, 3.3, 1.7, 0.5, setosa)
+  (5.2, 3.5, 1.5, 0.2, setosa)
+  (5.2, 3.4, 1.4, 0.2, setosa)
+  (5.4, 3.4, 1.5, 0.4, setosa)
+  (5.2, 4.1, 1.5, 0.1, setosa)
+  (5.5, 4.2, 1.4, 0.2, setosa)
+  (5.5, 3.5, 1.3, 0.2, setosa)
+  (5.1, 3.4, 1.5, 0.2, setosa)
+  (5.1, 3.8, 1.9, 0.4, setosa)
+  (5.1, 3.8, 1.6, 0.2, setosa)
+  (5.3, 3.7, 1.5, 0.2, setosa)
+  (7.0, 3.2, 4.7, 1.4, versicolor)
+  (6.4, 3.2, 4.5, 1.5, versicolor)
+  (6.9, 3.1, 4.9, 1.5, versicolor)
+  (5.5, 2.3, 4.0, 1.3, versicolor)
+  (6.5, 2.8, 4.6, 1.5, versicolor)
+  (5.7, 2.8, 4.5, 1.3, versicolor)
+  (6.3, 3.3, 4.7, 1.6, versicolor)
+  (6.6, 2.9, 4.6, 1.3, versicolor)
+  (5.2, 2.7, 3.9, 1.4, versicolor)
+  (5.9, 3.0, 4.2, 1.5, versicolor)
+  (6.0, 2.2, 4.0, 1.0, versicolor)
+  (6.1, 2.9, 4.7, 1.4, versicolor)
+  (5.6, 2.9, 3.6, 1.3, versicolor)
+  (6.7, 3.1, 4.4, 1.4, versicolor)
+  (5.6, 3.0, 4.5, 1.5, versicolor)
+  (5.8, 2.7, 4.1, 1.0, versicolor)
+  (6.2, 2.2, 4.5, 1.5, versicolor)
+  (5.6, 2.5, 3.9, 1.1, versicolor)
+  (5.9, 3.2, 4.8, 1.8, versicolor)
+  (6.1, 2.8, 4.0, 1.3, versicolor)
+  (6.3, 2.5, 4.9, 1.5, versicolor)
+  (6.1, 2.8, 4.7, 1.2, versicolor)
+  (6.4, 2.9, 4.3, 1.3, versicolor)
+  (6.6, 3.0, 4.4, 1.4, versicolor)
+  (6.8, 2.8, 4.8, 1.4, versicolor)
+  (6.7, 3.0, 5.0, 1.7, versicolor)
+  (6.0, 2.9, 4.5, 1.5, versicolor)
+  (5.7, 2.6, 3.5, 1.0, versicolor)
+  (5.5, 2.4, 3.8, 1.1, versicolor)
+  (5.5, 2.4, 3.7, 1.0, versicolor)
+  (5.8, 2.7, 3.9, 1.2, versicolor)
+  (6.0, 2.7, 5.1, 1.6, versicolor)
+  (5.4, 3.0, 4.5, 1.5, versicolor)
+  (6.0, 3.4, 4.5, 1.6, versicolor)
+  (6.7, 3.1, 4.7, 1.5, versicolor)
+  (6.3, 2.3, 4.4, 1.3, versicolor)
+  (5.6, 3.0, 4.1, 1.3, versicolor)
+  (5.5, 2.5, 4.0, 1.3, versicolor)
+  (5.5, 2.6, 4.4, 1.2, versicolor)
+  (6.1, 3.0, 4.6, 1.4, versicolor)
+  (5.8, 2.6, 4.0, 1.2, versicolor)
+  (5.6, 2.7, 4.2, 1.3, versicolor)
+  (5.7, 3.0, 4.2, 1.2, versicolor)
+  (5.7, 2.9, 4.2, 1.3, versicolor)
+  (6.2, 2.9, 4.3, 1.3, versicolor)
+  (5.1, 2.5, 3.0, 1.1, versicolor)
+  (5.7, 2.8, 4.1, 1.3, versicolor)
+  (6.3, 3.3, 6.0, 2.5, virginica)
+  (5.8, 2.7, 5.1, 1.9, virginica)
+  (7.1, 3.0, 5.9, 2.1, virginica)
+  (6.3, 2.9, 5.6, 1.8, virginica)
+  (6.5, 3.0, 5.8, 2.2, virginica)
+  (7.6, 3.0, 6.6, 2.1, virginica)
+  (7.3, 2.9, 6.3, 1.8, virginica)
+  (6.7, 2.5, 5.8, 1.8, virginica)
+  (7.2, 3.6, 6.1, 2.5, virginica)
+  (6.5, 3.2, 5.1, 2.0, virginica)
+  (6.4, 2.7, 5.3, 1.9, virginica)
+  (6.8, 3.0, 5.5, 2.1, virginica)
+  (5.7, 2.5, 5.0, 2.0, virginica)
+  (5.8, 2.8, 5.1, 2.4, virginica)
+  (6.4, 3.2, 5.3, 2.3, virginica)
+  (6.5, 3.0, 5.5, 1.8, virginica)
+  (7.7, 3.8, 6.7, 2.2, virginica)
+  (7.7, 2.6, 6.9, 2.3, virginica)
+  (6.0, 2.2, 5.0, 1.5, virginica)
+  (6.9, 3.2, 5.7, 2.3, virginica)
+  (5.6, 2.8, 4.9, 2.0, virginica)
+  (7.7, 2.8, 6.7, 2.0, virginica)
+  (6.3, 2.7, 4.9, 1.8, virginica)
+  (6.7, 3.3, 5.7, 2.1, virginica)
+  (7.2, 3.2, 6.0, 1.8, virginica)
+  (6.2, 2.8, 4.8, 1.8, virginica)
+  (6.1, 3.0, 4.9, 1.8, virginica)
+  (6.4, 2.8, 5.6, 2.1, virginica)
+  (7.2, 3.0, 5.8, 1.6, virginica)
+  (7.4, 2.8, 6.1, 1.9, virginica)
+  (7.9, 3.8, 6.4, 2.0, virginica)
+  (6.4, 2.8, 5.6, 2.2, virginica)
+  (6.3, 2.8, 5.1, 1.5, virginica)
+  (6.1, 2.6, 5.6, 1.4, virginica)
+  (7.7, 3.0, 6.1, 2.3, virginica)
+  (6.3, 3.4, 5.6, 2.4, virginica)
+  (6.4, 3.1, 5.5, 1.8, virginica)
+  (6.0, 3.0, 4.8, 1.8, virginica)
+  (6.9, 3.1, 5.4, 2.1, virginica)
+  (6.7, 3.1, 5.6, 2.4, virginica)
+  (6.9, 3.1, 5.1, 2.3, virginica)
+  (5.8, 2.7, 5.1, 1.9, virginica)
+  (6.8, 3.2, 5.9, 2.3, virginica)
+  (6.7, 3.3, 5.7, 2.5, virginica)
+  (6.7, 3.0, 5.2, 2.3, virginica)
+  (6.3, 2.5, 5.0, 1.9, virginica)
+  (6.5, 3.0, 5.2, 2.0, virginica)
+  (6.2, 3.4, 5.4, 2.3, virginica)
+  (5.9, 3.0, 5.1, 1.8, virginica)
+
+
+Column summary:
+       sepal_length  sepal_width  petal_length  petal_width
+count      150.0000     150.0000      150.0000     150.0000
+mean         5.8433       3.0573        3.7580       1.1993
+std          0.8281       0.4359        1.7653       0.7622
+min          4.3000       2.0000        1.0000       0.1000
+25%          5.1000       2.8000        1.6000       0.3000
+50%          5.8000       3.0000        4.3500       1.3000
+75%          6.4000       3.3000        5.1000       1.8000
+max          7.9000       4.4000        6.9000       2.5000
+
+----------------------------------------------------------------------
+2. OUTLIER DETECTION SUMMARY (IQR method)
+----------------------------------------------------------------------
+
+  sepal_length:
+    Q1=5.1000  Q3=6.4000  IQR=1.3000
+    Fences: [3.1500, 8.3500]
+    Outliers (0): []
+
+  sepal_width:
+    Q1=2.8000  Q3=3.3000  IQR=0.5000
+    Fences: [2.0500, 4.0500]
+    Outliers (4): [2.0, 4.1, 4.2, 4.4]
+
+  petal_length:
+    Q1=1.6000  Q3=5.1000  IQR=3.5000
+    Fences: [-3.6500, 10.3500]
+    Outliers (0): []
+
+  petal_width:
+    Q1=0.3000  Q3=1.8000  IQR=1.5000
+    Fences: [-1.9500, 4.0500]
+    Outliers (0): []
+
+  Total outlier values: 4
+
+----------------------------------------------------------------------
+3. ENGINEERED FEATURES
+----------------------------------------------------------------------
+
+  petal_area           = petal_length * petal_width
+  petal_to_sepal_ratio = petal_length / sepal_length
+  combined_score       = sepal_length + petal_length - sepal_width
+
+    Validation summary   : 150 / 150 rows matched the engineered formulas
+
+  All engineered rows validated successfully.
+
+
+       petal_area  petal_to_sepal_ratio  combined_score
+count    150.0000              150.0000         150.000
+mean       5.7941                0.6181           6.544
+std        4.7124                0.2406           2.699
+min        0.1100                0.2069           2.000
+25%        0.4200                0.3148           3.225
+50%        5.6150                0.7089           7.250
+75%        9.6900                0.8127           8.675
+max       15.8700                0.9524          12.000
+
+----------------------------------------------------------------------
+4. SPECIES BINARY ENCODING & BITWISE AND TABLE
+----------------------------------------------------------------------
+
+    Species binary values: ['0b1', '0b10', '0b11']
+
+  setosa         1        setosa         1        1        0b1
+  setosa         1        versicolor     2        0        0b0
+  setosa         1        virginica      3        1        0b1
+  versicolor     2        setosa         1        0        0b0
+  versicolor     2        versicolor     2        2        0b10
+  versicolor     2        virginica      3        2        0b10
+  virginica      3        setosa         1        1        0b1
+  virginica      3        versicolor     2        2        0b10
+  virginica      3        virginica      3        3        0b11
+
+
+----------------------------------------------------------------------
+5. UNIQUE MEASUREMENT COMBINATIONS
+----------------------------------------------------------------------
+
+  Total rows                : 150
+  Unique combinations       : 149
+
+     1. (6.3, 3.3, 6.0, 2.5)
+     2. (5.9, 3.0, 4.2, 1.5)
+     3. (7.0, 3.2, 4.7, 1.4)
+     4. (6.3, 2.5, 5.0, 1.9)
+     5. (5.2, 3.4, 1.4, 0.2)
+     6. (6.3, 3.3, 4.7, 1.6)
+     7. (5.8, 2.8, 5.1, 2.4)
+     8. (7.2, 3.0, 5.8, 1.6)
+     9. (4.6, 3.2, 1.4, 0.2)
+    10. (5.0, 3.4, 1.6, 0.4)
+
+
+----------------------------------------------------------------------
+6. MANUAL vs PANDAS STATISTICS
+----------------------------------------------------------------------
+
+  sepal_length             5.8433        5.8          5        4.3        7.9
+  sepal_width              3.0573          3          3        2.0        4.4
+  petal_length             3.7580        4.3        1.4        1.0        6.9
+  petal_width              1.1993        1.3        0.2        0.1        2.5
+
+
+----------------------------------------------------------------------
+7. FUNCTIONAL PROGRAMMING RESULTS
+----------------------------------------------------------------------
+
+  petal_length mean       : 3.7580
+  count > mean            : 93
+    map-rounded values      : [4.7, 4.5, 4.9, 4.0, 4.6, 4.5, 4.7, 4.6, 3.9, 4.2, 4.0, 4.7, 4.4, 4.5, 4.1, 4.5, 3.9, 4.8, 4.0, 4.9, 4.7, 4.3, 4.4, 4.8, 5.0, 4.5, 3.8, 3.9, 5.1, 4.5, 4.5, 4.7, 4.4, 4.1, 4.0, 4.4, 4.6, 4.0, 4.2, 4.2, 4.2, 4.3, 4.1, 6.0, 5.1, 5.9, 5.6, 5.8, 6.6, 4.5, 6.3, 5.8, 6.1, 5.1, 5.3, 5.5, 5.0, 5.1, 5.3, 5.5, 6.7, 6.9, 5.0, 5.7, 4.9, 6.7, 4.9, 5.7, 6.0, 4.8, 4.9, 5.6, 5.8, 6.1, 6.4, 5.6, 5.1, 5.6, 6.1, 5.6, 5.5, 4.8, 5.4, 5.6, 5.1, 5.1, 5.9, 5.7, 5.2, 5.0, 5.2, 5.4, 5.1]
+    product                 : 5.3181e+64
+
+======================================================================
+END OF REPORT
+======================================================================
